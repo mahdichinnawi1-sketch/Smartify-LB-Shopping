@@ -24,18 +24,20 @@ const Navbar = ({ cart = [], favorites = [] }) => {
         <Link to="/favorites" className="nav-link icon-btn">
           <FaHeart />
           <span className="link-text hide-on-mobile">Favorites</span>
-          {favorites.length > 0 && (
-            <span className="icon-badge">{favorites.length}</span>
-          )}
+          {favorites.length > 0 && <span className="icon-badge">{favorites.length}</span>}
         </Link>
 
         <Link to="/cart" className="nav-link icon-btn">
           <FaShoppingCart />
           <span className="link-text hide-on-mobile">Cart</span>
-          {cart.length > 0 && (
-            <span className="icon-badge">{cart.length}</span>
-          )}
+          {cart.length > 0 && <span className="icon-badge">{cart.length}</span>}
         </Link>
+
+        <Link to="/about" className="nav-link">
+  <span className="link-text">About</span>
+</Link>
+
+        
       </div>
     </nav>
   );

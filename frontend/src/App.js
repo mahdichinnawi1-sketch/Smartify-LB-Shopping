@@ -9,7 +9,7 @@ import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import FavoritesPage from "./pages/FavoritesPage";
-
+import AboutPage from "./pages/AboutPage";
 import "./styles/styles.css";
 
 const App = () => {
@@ -56,6 +56,7 @@ const App = () => {
           path="/favorites"
           element={<FavoritesPage favorites={favorites} />}
         />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
 
       <Footer />

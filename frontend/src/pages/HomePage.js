@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Import images as JS variables
+
 import product1 from "../images/product1.png";
 import product2 from "../images/product2.png";
 import product3 from "../images/product3.png";
@@ -9,16 +9,17 @@ import product4 from "../images/product4.png";
 import product5 from "../images/product5.png";
 import product6 from "../images/product6.png";
 
+
 const HomePage = () => {
   const navigate = useNavigate();
 
-  // Array of images for the carousel
   const images = [product1, product2, product3,product4,product5,product6];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
-  // Carousel logic: change image every 3 seconds with fade effect
+
+    
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(false); // fade out
