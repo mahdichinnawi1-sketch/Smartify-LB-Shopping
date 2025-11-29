@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 import product1 from "../images/product1.png";
 import product2 from "../images/product2.png";
 import product3 from "../images/product3.png";
@@ -9,17 +8,16 @@ import product4 from "../images/product4.png";
 import product5 from "../images/product5.png";
 import product6 from "../images/product6.png";
 
+import homeBackground from "../images/home.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const images = [product1, product2, product3,product4,product5,product6];
+  const images = [product1, product2, product3, product4, product5, product6];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
-
-    
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(false); // fade out
@@ -34,12 +32,17 @@ const HomePage = () => {
 
   // Styles
   const pageStyle = {
-    backgroundColor: "#000",
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     padding: "20px 0",
+
+    
+    backgroundImage: `url(${homeBackground})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
   };
 
   const carouselBlockStyle = {
